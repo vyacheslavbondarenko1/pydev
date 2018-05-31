@@ -1,6 +1,9 @@
 from flask import request, session, redirect, render_template
+import models
+from db import db
 
 from flask.blueprints import Blueprint
+
 
 home = Blueprint('home', __name__,
                  template_folder='templates',
@@ -8,4 +11,6 @@ home = Blueprint('home', __name__,
 
 @home.route("/")
 def index():
-    return render_template("index.html")
+    posts = db.session.query(models.Posts)
+    print posts
+    return render_template("index.html", myposts=posts)

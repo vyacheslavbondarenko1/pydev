@@ -1,3 +1,8 @@
 flask
 pygments
 markdown
+sqlalchemy
+flask_sqlalchemy
+alembic
+Flask-MySQLdb
+mysql-connector>=2.1.6

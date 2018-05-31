@@ -1,0 +1,1 @@
+ALCHEMY_URL = 'mysql://root:@localhost/pydev'
