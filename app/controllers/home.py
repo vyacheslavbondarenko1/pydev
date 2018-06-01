@@ -11,6 +11,6 @@ home = Blueprint('home', __name__,
 
 @home.route("/")
 def index():
-    posts = db.session.query(models.Posts)
+    posts = db.session.query(models.Posts).all()
     print posts
-    return render_template("index.html", posts=posts)
+    return render_template("index.html", myposts=posts)
