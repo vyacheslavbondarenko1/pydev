@@ -13,4 +13,4 @@ home = Blueprint('home', __name__,
 def index():
     posts = db.session.query(models.Posts)
     print posts
-    return render_template("index.html", myposts=posts)
+    return render_template("index.html", posts=posts)
